@@ -1,4 +1,7 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
+
+final randomizer = Random();
 
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
@@ -10,11 +13,11 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  var activeImage = 'asset/dice-images/dice-1.png';
+  var currentImage = 1;
 
   void rollDice() {
     setState(() {
-      activeImage = 'asset/dice-images/dice-6.png';
+      currentImage = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -23,25 +26,39 @@ class _DiceRollerState extends State<DiceRoller> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset(
-          activeImage,
-          width: 200,
-          height: 200,
-        ),
-        const SizedBox(height: 20),
-        ElevatedButton(
-            onPressed: rollDice,
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.blue,
-              backgroundColor: Colors.white,
+        // Image.asset(
+        //   'asset/dice-images/dice-$currentImage.png',
+        //   width: 200,
+        //   height: 200,
+        // ),
+        //const SizedBox(height: 20),
+        TextButton(
+          onPressed: rollDice,
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.blue,
+            backgroundColor: Colors.white,
+            //shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero,)
+          ),
+          child: ConstrainedBox(
+            constraints: new BoxConstraints.expand(width: 250, height: 250),
+            child: Image.asset(
+              'asset/dice-images/dice-$currentImage.png',
+              width: 250,
+              height: 250,
             ),
-            child: const Text(
-              'Roll the Dice',
-              style: TextStyle(
-                fontSize: 25,
-                color: Color.fromARGB(255, 0, 4, 41),
-              ),
-            ))
+          ),
+          // child: const Text(
+          //   'Roll the Dice',
+          //   style: TextStyle(
+          //     fontSize: 25,
+          //     color: Color.fromARGB(255, 0, 4, 41),
+          //   ),
+        ),
+        const SizedBox(height: 50),
+        Text(
+          '$currentImage',
+          style: TextStyle(fontSize: 80, color: Colors.white,  ),
+        )
       ],
     );
   }
