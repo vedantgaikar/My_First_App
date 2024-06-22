@@ -1,9 +1,6 @@
-# my_app
-
+# Dice Rolling App
+ 
 A new Flutter project.
-
- Dice Rolling App
-
  Overview
 
 Welcome to the Dice Rolling App, a simple yet engaging mobile application built with Flutter. This project was created to explore and demonstrate Flutter's UI customization and functionality capabilities.
