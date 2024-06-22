@@ -1,11 +1,11 @@
 # Dice Rolling App
  
 A new Flutter project.
- Overview
+## Overview
 
 Welcome to the Dice Rolling App, a simple yet engaging mobile application built with Flutter. This project was created to explore and demonstrate Flutter's UI customization and functionality capabilities.
 
-Features
+## Features
 
 - **Custom UI**: Designed a clean and intuitive interface.
 - **AppBar**: Added a top app bar for a polished look.
@@ -13,34 +13,30 @@ Features
 - **Dynamic Display**: The dice face and number update dynamically to show the result.
 - **Custom App Icon**: Unique app icon for a personalized touch.
 
-Getting Started
-
-# Prerequisites
+## Prerequisites
 
 To run this project, you will need:
 
 - Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
 - Dart SDK (usually included with Flutter)
 
-### Installation
+## Installation
 
 1. **Clone the repo**
   
    git clone https://github.com/vedantgaikar/My_First_App.git
    cd My_First_App
   
-
 2. **Install dependencies**
    
    flutter pub get
   
-
 3. **Run the app**
   
    flutter run
 
 
-# Usage
+## Usage
 
 - Tap on the dice image in the center of the screen to roll the dice.
 - The dice face and the number below it will update dynamically to show the result of the roll.
