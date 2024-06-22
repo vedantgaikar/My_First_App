@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/diceImage.dart';
+import 'package:my_app/rollDice.dart';
 import 'package:my_app/styledText.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -7,20 +9,20 @@ class GradientContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
             Color.fromARGB(255, 0, 78, 146),
             Color.fromARGB(255, 0, 4, 41),
+            Color.fromARGB(255, 0, 0, 0),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
       ),
-      child: const Center(
-        child: StyledText('Heyy Buddy')
+      child: Center(
+        child: DiceRoller(),
       ),
     );
   }
